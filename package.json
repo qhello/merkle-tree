@@ -1,0 +1,61 @@
+{
+	"name": "merkle-tree",
+	"version": "1.0.0",
+	"description": "Simple merkle tree exercise implementation",
+	"main": "src/index.ts",
+	"type": "module",
+	"scripts": {
+		"test": "npx jest",
+		"start": "npx ts-node src/index.ts"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/qhello/merkle-tree.git"
+	},
+	"keywords": [
+		"merkle",
+		"tree",
+		"nodejs",
+		"typescript",
+		"tdd",
+		"technical",
+		"test"
+	],
+	"author": "Quentin Hello",
+	"license": "ISC",
+	"bugs": {
+		"url": "https://github.com/qhello/merkle-tree/issues"
+	},
+	"homepage": "https://github.com/qhello/merkle-tree#readme",
+	"dependencies": {
+		"lodash": "^4.17.19"
+	},
+	"devDependencies": {
+		"@types/jest": "^26.0.7",
+		"@types/lodash": "^4.14.158",
+		"@typescript-eslint/eslint-plugin": "^3.7.1",
+		"@typescript-eslint/parser": "^3.7.1",
+		"eslint": "^7.5.0",
+		"eslint-config-airbnb-base": "^14.2.0",
+		"eslint-config-prettier": "^6.11.0",
+		"eslint-plugin-import": "^2.22.0",
+		"husky": "^4.2.5",
+		"jest": "^26.1.0",
+		"lint-staged": "^10.2.11",
+		"prettier": "^2.0.5",
+		"ts-jest": "^26.1.4",
+		"ts-node": "^8.10.2",
+		"typescript": "^3.9.7"
+	},
+	"husky": {
+		"hooks": {
+			"pre-commit": "lint-staged"
+		}
+	},
+	"lint-staged": {
+		"**/*.ts": [
+			"npx eslint --cache --fix",
+			"npx prettier --write"
+		]
+	}
+}
